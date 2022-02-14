@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 body {
-  height: 100vh;
+  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +53,34 @@ svg path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: dash 3s linear infinite;
+}
+
+video {
+  max-height: 75vh;
+  margin: 0px auto;
+  display: block;
+}
+
+img {
+  vertical-align: middle;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.single-column:hover {
+	animation-play-state: paused;
+}
+
+.single-column:nth-of-type(odd) {
+  align-self: flex-end;
+  --direction: 50%;
+}
+
+@keyframes slide {
+  to {
+    -webkit-transform: translateY(var(--direction, -50%));
+            transform: translateY(var(--direction, -50%));
+  }
 }
 
 /* The typing effect */
