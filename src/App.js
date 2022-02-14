@@ -1,7 +1,7 @@
 import './App.css';
 import { Heart } from './Heart';
 import 'animate.css';
-import { Component, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const images = importAll(require.context('../assets', false, /\.(png|jpe?g|svg)$/));
 
@@ -39,7 +39,7 @@ export function App() {
     {displayRest && <>
       {
         Object.values(images).map((image) => {
-          return <img src={image} />
+          return <img src={image} alt='Amanda' />
         })
       }
     </>}
